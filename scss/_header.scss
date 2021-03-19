@@ -280,6 +280,9 @@ header{
       top: 0;
       right: 0;
       font-weight: bold;
+      @include mq("l-sp"){
+        color: #fff;
+        }
     }
     h2{
       writing-mode: vertical-rl;
