@@ -1,0 +1,483 @@
+.container{
+  width: 100%;
+  margin: 0 auto;
+  @include mq("l-tab"){
+    width: 95%;
+  }
+  @include mq("tab"){
+    width: 90%;
+  }
+  .key-wrapper{
+    width: 100%;
+    height: 830px;
+    padding: 250px 0 50px;
+    background-color: #f9f8f7;
+    align-items: center;
+    margin: 0 auto 100px;
+    @include mq("tab"){
+      height: 600px;
+      padding: 100px 0 50px;
+      background-color: #fff;
+    }
+    @include mq("l-sp"){
+      height: 500px;
+      width: 90%;
+      }
+    
+  .key-txt{
+    height: 420px;
+    margin: 0 auto;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    position: relative;
+    @include mq("l-sp"){
+      overflow-x: hidden;
+      height: 400px;
+      }
+    h2{
+      padding: 20px 0 20px 2vw;
+      @include mq("l-sp"){
+        font-size: 20px;
+        padding: 20px 20px 20px 3vw;
+        }
+      &::after{
+        display: block;
+        content: "";
+        width: 1px;
+        height: 100px;
+        background-color: #aaa;
+        margin-right: 2vw;
+        @include mq("l-sp"){
+          margin-right: 3vw;
+          }
+      }
+    }
+    p{
+      padding: 40px 0 ;
+      font-size: 18px;
+      font-weight: bold;
+      text-indent: 1rem;
+      letter-spacing: 0.1em;
+      line-height: 2;
+      @include mq("l-sp"){
+        font-size: 16px;
+        line-height: 1.8;
+        }
+      &:nth-of-type(4){
+        margin-left: 2vw;
+      }
+    }
+    .key-matsu{
+    position: absolute;
+    bottom: 10px;
+    left: -200px;
+    width: 170px;
+    margin-top: 50%;
+    @include mq("l-sp"){
+      display: none;
+      }
+  }
+}
+}
+#product{
+  width: 85%;
+  height: 700px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 auto 150px ;
+  padding-bottom: 150px;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  @include mq("tab"){
+    height: 800px;
+  }
+  @include mq("l-sp"){
+    height: 750px;
+    width: 100%;
+    display: block;
+    padding-bottom: 50px;
+    margin: 0 auto 50px ;
+    }
+  .visual-box{
+    width: 85%;
+    height: 100%;
+    overflow: hidden;
+    @include mq("tab"){
+      width: 100%;
+      height: 300px;
+    }
+    h2{
+      writing-mode: vertical-rl;
+      position: absolute;
+      padding: 30px 10px 50px;
+      background-color: $base-color;
+      top: 1%;
+      right: 1%;
+      z-index: 1;
+      @include mq("l-sp"){
+        font-size: 18px;
+        padding: 20px 5px 20px 5px;
+        top: 2%;
+        right: 2%;
+        }
+      a{
+        display: block;
+        color: $txt-color;
+      }
+      &:hover{
+        transform: translate(2px,2px);
+        box-shadow: 0 0 1px #aaa;
+        transition: 0.5s;
+      }
+    }
+      P{
+        height: 100%;
+        img{
+          object-fit: cover;
+          object-position: 50% 50%;
+          transition: 1s;
+        }
+      }
+    }
+    .txt-box{
+      width: 30%;
+      height: 340px;
+      padding: 20px 3vw 20px 0;
+      background-color: $base-color;
+      position: absolute;
+      top: 28%;
+      left: 0;
+      z-index: 2;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      @include mq("l-tab"){
+        left: 3%;
+      }
+      @include mq("tab"){
+        width:50%;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      @include mq("l-sp"){
+        top: 40%;
+        width:70%;
+        }
+        @include mq("sp"){
+          top: 40%;
+        } 
+      p{
+        padding: 20px 0;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        line-height: 2.0;
+        @include mq("l-sp"){
+          font-size: 15px;
+          }
+      }
+      .to-product{
+        height: 200px;
+        writing-mode: vertical-rl;
+        border: 1px solid $txt-color;
+        padding:25px 5px 0;
+        margin: 30% 2vw 0 0;
+        @include mq("l-sp"){
+          writing-mode: horizontal-tb;
+          width: 160px;
+          height: 40px;
+          padding: 2px 20px;
+          position: absolute;
+          top: 100%;
+          left: 30%;
+          margin: 0 auto;
+          }
+        a{
+          font-weight: bold;
+          display: block;
+          position:relative;
+          display: flex;
+          color: $txt-color;
+          @include mq("l-sp"){
+            line-height: 35px;
+            }
+          &:hover{
+            transform: translate(2px,2px);
+            transition: 0.5s;
+          }
+          span{
+          display: block;
+          margin: 20px auto 0;
+          width: 8px;
+          height: 8px;
+          border-top: 2px solid #555;
+          border-right: 2px solid #555;
+          transform: scale(0.6) rotate(45deg);
+          transition: 0.3s;
+          @include mq("l-sp"){
+            display: block;
+            margin: 13px auto 0;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid #555;
+            border-right: 2px solid #555;
+            transform: scale(0.6) rotate(45deg);
+           transition: 0.3s;
+            }
+          }
+          &:hover>span{
+            transform: scale(1);
+            border-top: 2px solid $txt-color;
+            border-right: 2px solid $txt-color;
+          }
+        }
+      }
+  }
+}
+
+#history{
+  width: 85%;
+  height: 620px;
+  display: flex;
+  padding-bottom: 50px;
+  margin: 0 0 80px 5%;
+  position: relative;
+  @include mq("tab"){
+    height: 720px;
+  }
+  @include mq("l-sp"){
+    width: 99%;
+    display: block;
+    margin: 0 auto 80px;
+    }
+  .visual-box{
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    @include mq("tab"){
+      height: 300px;
+      width: 100%;
+    }
+    h2{
+      writing-mode: vertical-rl;
+      position: absolute;
+      padding: 30px 10px 50px;
+      background-color: $base-color;
+      top: 1%;
+      left: 1%;
+      z-index: 1;
+      @include mq("l-sp"){
+        width: 40px;
+        font-size: 18px;
+        padding: 20px 5px 20px 5px;
+        top: 2%;
+        left: 85%;
+        }
+      a{
+        color:$txt-color;
+      }
+      &:hover{
+          transform: translate(2px,2px);
+          transition: 0.5s;
+      }
+    }
+    p{
+      height: 100%;
+      img{
+      object-fit: cover;
+      object-position: 0 80%;
+      @include mq("tab"){
+        object-position:center;
+      }
+      @include mq("l-sp"){
+        font-size: 15px;
+        }
+      }
+    }
+  }
+  .txt-box{
+    width: 30%;
+    height: 365px;
+    padding: 20px 1vw 20px 0;
+    background-color: $base-color;
+    position: absolute;
+    top: 29%;
+    right: 0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    @include mq("l-tab"){
+      width: 38%;
+      padding: 20px 0 20px 0;
+      right: 0;
+    }
+    @include mq("tab"){
+      width:50%;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    @include mq("l-sp"){
+      top: 45%;
+      width: 70%;
+      }
+      @include mq("sp"){
+        top: 40%;
+      }
+    p{
+      padding: 20px 0;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 2.0;
+    }
+    .to-history{
+      height: 200px;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      border: 1px solid $txt-color;
+      padding:25px 5px 0;
+      margin: 30% 2vw 0 0;
+      @include mq("l-sp"){
+        writing-mode: horizontal-tb;
+        width: 180px;
+        height: 40px;
+        padding: 2px 20px;
+        position: absolute;
+        top: 100%;
+        left: 25%;
+        margin: 0 auto;
+        }
+      a{
+        border-radius: 2px;
+        font-weight: bold;
+        display:block;
+        position:relative;
+        display: flex;
+        color: $txt-color;
+        @include mq("l-sp"){
+          line-height: 35px;
+          }
+        &:hover{
+            transform: translate(2px,2px);
+            transition: 0.5s;
+        }
+        span{
+          display: block;
+          margin: 20px auto 0;
+          width: 8px;
+          height: 8px;
+          border-top: 2px solid #555;
+          border-right: 2px solid #555;
+          transform: scale(0.6) rotate(45deg);
+          transition: 0.3s;
+          @include mq("l-sp"){
+            display: block;
+            margin: 13px auto 0;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid #555;
+            border-right: 2px solid #555;
+            transform: scale(0.6) rotate(45deg);
+            transition: 0.3s;
+            }
+        }
+        &:hover>span{
+          transform: scale(1);
+          border-top: 2px solid $txt-color;
+          border-right: 2px solid $txt-color;
+        }
+      }
+    }
+  }
+}
+  .gallary-wrapper{
+    width: 90%;
+    height: 500px;
+    margin: 0 auto 100px;
+    padding-bottom: 500px;
+    border-bottom: 1px solid #aaa;
+    @include mq("l-sp"){
+      position: relative;
+      height: 700px;
+    }
+    ul{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      overflow: hidden;
+      @include mq("l-tab"){
+        padding-bottom: 500px;
+      }
+      @include mq("l-tab"){
+        padding-bottom: 550px;
+      }
+      li{
+        width: 25%;
+        height: 300px;
+        overflow: hidden;
+        @include mq("l-tab"){
+          width: 30%;
+        }
+        @include mq("l-sp"){
+          width:200px;
+          height: 150px;
+          position: absolute;
+        }
+        &:first-of-type{
+          @include mq("l-sp"){
+            top:0;
+            left: 0;
+          }
+        }
+          &:nth-of-type(2){
+            @include mq("l-sp"){
+              top:25%;
+              right: 0;
+            }
+          }
+          &:nth-of-type(3){
+            @include mq("l-sp"){
+              top:50%;
+              left: 0;
+            }
+          }
+        img{
+            object-fit: cover;
+        }
+      }
+    }
+    .to-history2{
+      width: 200px;
+      border: 1px solid $txt-color;
+      margin: 50px auto;
+      
+      a{
+        font-weight: bold;
+        display:block;
+        position:relative;
+        display: flex;
+        color: $txt-color;
+        padding: 8px 20px 8px 30px;
+        &:hover{
+            transform: translate(2px,2px);
+            transition: 0.5s;
+        }
+        span{
+          display: block;
+          margin: 8px auto 0;
+          width: 8px;
+          height: 8px;
+          border-top: 2px solid #555;
+          border-right: 2px solid #555;
+          transform: scale(0.6) rotate(45deg);
+          transition: 0.3s;
+        }
+        &:hover>span{
+          transform: scale(1) rotate(45deg) translate(5px,-5px);
+          border-top: 2px solid $txt-color;
+          border-right: 2px solid $txt-color;
+        }
+      }
+    }
+  }
+}

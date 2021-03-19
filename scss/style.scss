@@ -1,0 +1,12 @@
+@import "_reset.scss";
+@import "_mixin.scss";
+@import "_header.scss";
+@import "_main.scss";
+@import "_sub.scss";
+@import "_footer.scss";
+
+body{
+    background-color: $base-color;
+    font-family: serif;
+    color: $txt-color;
+}

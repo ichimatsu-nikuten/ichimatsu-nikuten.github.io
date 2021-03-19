@@ -1,0 +1,91 @@
+footer{
+  width: 100%;
+  height: 200px;
+  padding: 20px 30px 50px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  @include mq("l-sp"){
+    height: 50px;
+  }
+  .f-txt-wrapper{
+    width: 40%;
+    height: 100%;
+    margin: 0 auto 20px;
+    .f-logo{
+      width: 70px;
+      margin: 20px 25%;
+      @include mq("l-tab"){
+        margin: 20px auto;
+      }
+    }
+    p{
+      width: 50%;
+      margin: 0 auto;
+      @include mq("l-tab"){
+        width: 70%;
+      }
+      @include mq("tab"){
+        width: 80%;
+        font-size: 14px;
+      }
+      @include mq("l-sp"){
+        display: none;
+      }
+    }
+  }
+  .f-nav-wrapper{
+    width: 60%;
+    margin: 30px 0 30px;
+    padding-left: 80px;
+    border-left: 1px solid #aaa;
+    @include mq("l-tab"){
+      font-size: 15px;
+    }
+    @include mq("l-sp"){
+      display: none;
+      }
+    
+    ul{
+      display: flex;
+      padding: 10px 0;
+      li{
+        width: 20%;
+        @include mq("l-tab"){
+          width: 23%;
+        }
+        @include mq("tab"){
+          width: 24%;
+        }
+        a{
+          color:$txt-color;
+          @include mq("tab"){
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  .copy{
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+    @include mq("l-sp"){
+      left: 10%;
+    }
+  }
+  .f-matsu{
+    width: 190px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    @include mq("l-tab"){
+      width: 100px;
+    }
+    @include mq("l-sp"){
+      bottom: 10px;
+    }
+  }
+}
