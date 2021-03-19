@@ -1,0 +1,12 @@
+@import "_reset.scss";
+@import "_mixin.scss";
+@import "_header.scss";
+@import "_history.scss";
+@import "_footer.scss";
+
+
+body{
+    font-family: serif;
+    color: $txt-color;
+    overflow-x: hidden;
+}

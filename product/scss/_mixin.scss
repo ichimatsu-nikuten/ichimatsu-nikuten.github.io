@@ -1,0 +1,35 @@
+$base-color:#fff;
+$main-color:#765F4D;
+$txt-color:#333;
+
+
+$breakpoints: (
+  "l-tab": "screen and (max-width: 1200px)",
+  "tab": "screen and (max-width: 959px)",
+  "l-sp": "screen and (max-width: 736px)",
+  "sp": "screen and (max-width: 320px)",
+);
+
+@mixin mq($breakpoint: l-tab) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
+@mixin mq($breakpoint: tab) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
+@mixin mq($breakpoint: l-sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }

@@ -1,0 +1,383 @@
+header{
+  width: 100%;
+  height:80vh;
+  margin: 0 0 150px;
+  @include mq("l-tab"){
+    height: 50vh;
+    margin: 0 0 50px;
+    }
+    @include mq("l-sp"){
+      height: 100vh;
+    }
+  #side-title{
+    position: fixed;
+    top: 100px;
+    right: 34px;
+    overflow: hidden;
+    z-index: 300;
+    display: none;
+    writing-mode: vertical-rl;
+    @include mq("l-sp"){
+      writing-mode: horizontal-tb;
+      width: 200%;
+      padding: 10px 20px;
+      top: 0;
+      left: 0;
+      background-color: rgba(255,255,255,0.9);
+      }
+    h1{
+      @include mq("l-sp"){
+        background: url(../../img/logo.png)no-repeat left center/50px;
+        padding-left: 60px;
+      }
+      &::before{
+        display: block;
+        content: "";
+        background-color: #555;
+        width: 1px;
+        height: 170px;
+        transform: translate(0,-100%);
+        transition: 0.4s;
+        @include mq("l-sp"){
+          width: 0;
+          height: 0;
+          display: none;
+          }
+      }
+      &:hover::before{
+        transform: translate(0,0);
+      }
+      a{
+        font-size:24px;
+        color: $txt-color;
+      }
+    }
+  }
+  #ham{
+    display: none;
+    }
+  #hamb{
+    position: fixed;
+    top: 290px;
+    right: 40px;
+    z-index: 300;
+    display: none;
+    cursor: pointer;
+    @include mq("l-sp"){
+      top: 0;
+      right: 10px;
+      margin: 10px;
+      }
+    p:nth-of-type(2){
+      line-height: 40px;
+      padding-top: 50px;
+      font-size: 12px;
+      font-weight: bold;
+      writing-mode: vertical-rl;
+      @include mq("l-sp"){
+        writing-mode: horizontal-tb;
+        padding-top: 30px;
+        }
+    }
+    #ham-btn{
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      top: 0;
+      right: 0;
+      position: absolute;
+      &:hover>span{
+        height: 32px;
+      }
+      &:hover>span::after{
+        height: 32px;
+      }
+      &:hover>span::before{
+        height: 32px;
+      }
+      span{
+        display: block;
+        width: 1px;
+        height: 24px;
+        background-color: #555;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transition: 0.5s;
+        &::after{
+          display: block;
+          content: "";
+          width: 1px;
+          height: 16px;
+          background-color: #555;
+          position: absolute;
+          left: 10px;
+          }
+        &::before{
+          display: block;
+          content: "";
+          width: 1px;
+          height: 32px;
+          background-color: #555;
+          position: absolute;
+          left: -10px;
+        }
+      }
+    }
+  }
+
+  #ham:checked~#hamb span{
+    height: 32px;
+    transform: rotate(45deg);
+    transition: 0.2s;
+    &::after{
+      left:0;
+      height: 32px;
+      transform: rotate(-90deg);
+      transition: 0.2s;
+    }
+    &::before{
+      display: none;
+    }
+  }
+  #ham:checked~#hamb>p:nth-of-type(2){
+    display: none;
+  }
+  .g-nav{
+    width: 40%;
+    height: 100vh;
+    background-color:#fff;
+    position: fixed;
+    top:0;
+    right: 0;
+    transform: translate(102%,0);
+    z-index: 200;
+    writing-mode: vertical-rl;
+    display: flex;
+    @include mq("l-sp"){
+      width: 80%;
+    }
+    h3{
+      height: 20%;
+      margin: 50px 90px 0 0;
+      padding-top: 20px;
+      font-size: 22px;
+      @include mq("l-sp"){
+        writing-mode:horizontal-tb;
+        text-align: end;
+        }
+      span{
+          display: block;
+          font-size: 15px;
+      }
+    }
+    ul{
+      width: 70%;
+      height: 35%;
+      padding-top: 7%;
+      margin-right: 8vw;
+      border-top: 1px solid #aaa;
+      li{
+        width: 20%;
+        height: 100%;
+        overflow: hidden;
+        @include mq("l-sp"){
+          width: 25%;
+          }
+        a{
+          color: $txt-color;
+          font-size: 18px;
+          font-weight: bold;
+          display: block;
+          padding: 0 20px 20px;
+          display: flex;
+          span{
+            display: block;
+            margin: 20px auto 0;
+            width: 8px;
+            height: 8px;
+            border-right: 1px solid $txt-color;
+            transform: scale(0.6);
+            transition: 0.3s;
+          }
+          &:hover>span{
+            transform: scale(1) rotate(45deg);
+            border-top: 2px solid $txt-color;
+            border-right: 2px solid $txt-color;
+          }
+        }
+      }
+    }
+    .n-matsu{
+      width: 180px;
+      position: absolute;
+      top: 80%;
+      left: 10%;
+    }
+  }
+  #ham:checked~.g-nav{
+    animation :slide1 0.8s forwards;
+  }
+  @keyframes slide1{
+    0%{
+      opacity: 0;
+      transform: translate(102%,0);
+      }
+
+      100%{
+        opacity: 1;
+        transform: translate(0,0);
+      }
+  }
+  
+  /* ナビボタン２ */
+  .g-nav-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: -150;
+    opacity: 0;
+  }
+  #ham:checked~.g-nav-wrapper{
+    animation :slide 0.8s forwards;
+  }
+  @keyframes slide{
+    0%{
+        opacity: 0;
+        z-index: 150px;
+    }
+    50%{
+        opacity: 0;
+        z-index: 150;
+    }
+    100%{
+        opacity: 1;
+        z-index: 150;
+    }
+  }
+  //nav部分
+
+  h2{
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 5%;
+    top: 50px;
+    height: 100%;
+    padding: 20px 20px;
+    text-indent: 3rem;
+    @include mq("l-tab"){
+      height: 50vh;
+    }
+    @include mq("l-sp"){
+      height: 100vh;
+      top:0;
+      padding: 20px 15px;
+      z-index: 1;
+      background-color: rgba(255,255,255,0.9);
+    }
+    @include mq("sp"){
+      padding: 20px 10px;
+    }
+    span{
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      bottom: 70px;
+      z-index: 2;
+      padding: 10px 10px 110px;
+      overflow: hidden;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      @include mq("l-sp"){
+        bottom: 10px;
+      }
+      @include mq("sp"){
+        right: 18px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        width: 1px;
+        height: 150px;
+        background-color: #aaa;
+        animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
+      }
+      @keyframes sdl {
+        0% {
+          opacity: 1;
+          transform: scale(1, 0);
+          transform-origin: 0 0;
+        }
+        30% {
+          transform: scale(1, 1);
+          transform-origin: 0 0;
+        }
+        30.1%, 70% {
+          transform: scale(1, 1);
+          transform-origin: 0 100%;
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1, 0);
+          transform-origin: 0 100%;
+        }
+      }
+    }
+  }
+  .history-visual-wrapper{
+    width: 85%;
+    height: 95vh;
+    overflow: hidden;
+    @include mq("l-tab"){
+      height: 50vh;
+      }
+      @include mq("l-sp"){
+        width: 100%;
+        height: 100vh;
+      }
+    .logo{
+      position: absolute;
+      z-index: 100;
+      width: 400px;
+      height: 400px;
+      top: 0;
+      right: 5%;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      @include mq("l-tab"){
+        width: 200px;
+        height: 200px;
+        bottom: 50%;
+      }
+      @include mq("l-sp"){
+        width: 200px;
+        height: 200px;
+        bottom: 150px;
+      }
+      @include mq("sp"){
+        width: 170px;
+        height: 170px;
+      }
+    }
+    .history-visual{
+      width: 100%;
+      height: 100%;
+      img{
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+}/* /.header */

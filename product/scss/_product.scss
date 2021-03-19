@@ -1,0 +1,984 @@
+.product-container{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  @include mq("tab"){
+    width: 97%;
+  }
+  .p-key-wrapper{
+    width: 100%;
+    height: 630px;
+    padding: 50px 0 50px;
+    align-items: center;
+    margin: 0 auto 100px;
+    display: flex;
+    @include mq("l-sp"){
+      display: block;
+      height: 800px;
+      padding: 0;
+    }
+    &::after{
+      display: block;
+      content: "";
+      width: 100%;
+      height: 800px;
+      position: absolute;
+      top: -200px;
+      left: 0;
+      z-index: -1;
+      background-color: #f9f8f7;
+    }
+    .p-key-txt{
+      width: 50%;
+      height: 420px;
+      writing-mode: vertical-rl;
+      position: relative;
+      @include mq("l-sp"){
+        width: 100%;
+        margin: 0 auto;
+      }
+      @include mq("sp"){
+        width: 100%;
+      }
+      h2{
+        padding: 20px 4vw 20px 2vw;
+        @include mq("tab"){
+          font-size: 24px;
+        }
+        &::after{
+          display: block;
+          content: "";
+          width: 1px;
+          height: 100px;
+          background-color: #aaa;
+          margin-right: 2vw;
+        }
+      }
+      p{
+        padding: 50px 0 ;
+        font-size: 17px;
+        font-weight: bold;
+        text-indent: 1rem;
+        letter-spacing: 0.1em;
+        line-height: 2;
+        font-weight: bold;
+        @include mq("tab"){
+          font-size: 15px;
+        }
+      }
+    }
+    .product-img{
+      width: 40%;
+      height: 420px;
+      overflow: hidden;
+      @include mq("l-sp"){
+        width: 100%;
+      }
+      img{
+        object-fit: cover;
+      }
+      @include mq("tab"){
+        height: 320px;
+      }
+    }
+  }
+
+  #beef{
+    width: 80%;
+    height: 500px;
+    margin:0 auto 100px;
+    padding: 20px;
+    writing-mode:vertical-rl;
+    border-bottom: 1px solid #aaa;
+    position: relative;
+    @include mq("tab"){
+      width: 88%;
+    }
+    @include mq("l-sp"){
+      display: flex;
+      width: 100%;
+      height: 700px;
+    }
+    h2{
+      @include mq("l-sp"){
+        font-size: 20px;
+        }
+      &::after{
+        display: block;
+        content: "";
+        width: 1px;
+        height: 100px;
+        background-color: #aaa;
+        margin-right: 1vw;
+        @include mq("l-sp"){
+          margin-right: 1px;
+          }
+      }
+    }
+    .txt-box{
+      width: 40%;
+      height: 300px;
+      padding: 10px;
+      @include mq("tab"){
+        width: 50%;
+      }
+      @include mq("l-sp"){
+        width: 75%;
+        margin: 170px auto 0;
+        }
+        @include mq("sp"){
+          width: 100%;
+          }
+      p{
+        padding-top: 20px;
+        margin-left: 25px;
+        position: relative;
+        font-weight: bold;
+        @include mq("l-tab"){
+          margin-left: 20px;
+        }
+        @include mq("tab"){
+          margin-left: 10px;
+        }
+        @include mq("l-sp"){
+          margin-left: 7px;
+          font-size: 14px;
+        }
+        &:first-of-type{
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "九八〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(2){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "七八〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(3){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "六八〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(4){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "五八〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(5){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "二五〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(6){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "三〇〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(n+7){
+          text-indent: 1rem;
+          margin-left: 10px;
+          @include mq("l-sp"){
+            margin-left: 5px;
+            }
+        }
+      }
+    }
+    .beef-wrapper{
+      width: 50%;
+      height: 600px;
+      margin-top: 30px;
+      position: relative;
+      @include mq("l-sp"){
+        position: absolute;
+        top: 0;
+        left: 30%;
+      }
+      p{
+        width:44%;
+        height: 33%;
+        margin-right: 5%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include mq("tab"){
+          width: 50%;
+          height: 25%;
+        }
+        @include mq("l-sp"){
+        width: 100%;
+        margin-right: 2%;
+        }
+        &:nth-of-type(2){
+          position: absolute;
+          top: 20%;
+          right: 35%;
+          @include mq("l-sp"){
+            top:15%;
+            right: 50%;
+          }
+        }
+        img{
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  #pork{
+    width: 80%;
+    height: 500px;
+    margin:0 auto 100px;
+    padding: 20px;
+    border-bottom: 1px solid #aaa;
+    writing-mode:vertical-rl;
+    position: relative;
+    @include mq("tab"){
+      width: 88%;
+    }
+    @include mq("l-sp"){
+      display: flex;
+      width: 100%;
+      height: 700px;
+    }
+    h2{
+      @include mq("l-sp"){
+        font-size: 20px;
+        }
+      &::after{
+        display: block;
+        content: "";
+        width: 1px;
+        height: 100px;
+        background-color: #aaa;
+        margin-right: 1vw;
+        @include mq("l-sp"){
+          margin-right: 1px;
+          }
+      }
+    }
+    .txt-box{
+      width: 40%;
+      height: 300px;
+      padding: 10px;
+      @include mq("tab"){
+        width: 50%;
+      }
+      @include mq("l-sp"){
+        width: 70%;
+        margin: 170px auto 0;
+        }
+        @include mq("sp"){
+          width: 90%;
+          }
+      p{
+        padding-top: 20px;
+        margin-left: 25px;
+        position: relative;
+        font-weight: bold;
+        @include mq("tab"){
+          margin-left: 10px;
+        }
+        @include mq("l-sp"){
+          margin-left: 7px;
+          font-size: 14px;
+        }
+        &:first-of-type{
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "二九五円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(2){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "二五五円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(3){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "二一〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(4){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "二一〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(5){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "一六五円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(6){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "一八五円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(n+7){
+          text-indent: 1rem;
+          margin-left: 10px;
+        }
+      }
+    }
+    .pork-wrapper{
+      width: 50%;
+      height: 600px;
+      margin-top: 30px;
+      position: relative;
+      @include mq("l-sp"){
+        position: absolute;
+        top: 0;
+        left: 30%;
+      }
+      p{
+        width:44%;
+        height: 33%;
+        margin-right: 5%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include mq("tab"){
+          width: 50%;
+          height: 25%;
+        }
+        @include mq("l-sp"){
+          width: 100%;
+          margin-right: 2%;
+          }
+        &:nth-of-type(2){
+          position: absolute;
+          top: 20%;
+          right: 35%;
+          @include mq("l-sp"){
+            top:15%;
+            right: 50%;
+          }
+        }
+        img{
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  #chiken{
+    width: 80%;
+    height: 500px;
+    margin:0 auto 100px;
+    padding: 20px;
+    border-bottom: 1px solid #aaa;
+    writing-mode:vertical-rl;
+    position: relative;
+    @include mq("tab"){
+      width: 88%;
+    }
+    @include mq("l-sp"){
+      display: flex;
+      width: 100%;
+      height: 700px;
+    }
+    h2{
+      @include mq("l-sp"){
+        font-size: 20px;
+        }
+      &::after{
+        display: block;
+        content: "";
+        width: 1px;
+        height: 100px;
+        background-color: #aaa;
+        margin-right: 1vw;
+        @include mq("l-sp"){
+          margin-right: 1px;
+          }
+      }
+    }
+    .txt-box{
+      width: 40%;
+      height: 300px;
+      padding: 10px;
+      @include mq("tab"){
+        width: 50%;
+      }
+      @include mq("l-sp"){
+        width: 60%;
+        margin: 170px auto 0;
+        }
+        @include mq("sp"){
+          width: 80%;
+          }
+      p{
+        padding-top: 20px;
+        margin-left: 25px;
+        position: relative;
+        font-weight: bold;
+        @include mq("tab"){
+          margin-left: 10px;
+        }
+        @include mq("l-sp"){
+          margin-left: 7px;
+          font-size: 14px;
+        }
+        &:first-of-type{
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "二九五円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(2){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "一八〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(3){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "一三〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(4){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "一一〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(5){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "一五〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(n+6){
+          text-indent: 1rem;
+          margin-left: 10px;
+        }
+      }
+    }
+    .chiken-wrapper{
+      width: 50%;
+      height: 600px;
+      margin-top: 30px;
+      position: relative;
+      @include mq("l-sp"){
+        position: absolute;
+        top: 0;
+        left: 30%;
+      }
+      p{
+        width:44%;
+        height: 33%;
+        margin-right: 5%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include mq("tab"){
+          width: 50%;
+          height: 25%;
+        }
+        @include mq("l-sp"){
+          width: 100%;
+          margin-right: 2%;
+          }
+        &:nth-of-type(2){
+          position: absolute;
+          top: 20%;
+          right: 35%;
+          @include mq("l-sp"){
+            top:15%;
+            right: 50%;
+          }
+        }
+        img{
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  #others{
+    width: 80%;
+    height: 500px;
+    margin:0 auto 100px;
+    padding: 20px;
+    border-bottom: 1px solid #aaa;
+    writing-mode:vertical-rl;
+    position: relative;
+    @include mq("tab"){
+      width: 88%;
+    }
+    @include mq("l-sp"){
+      display: flex;
+      width: 100%;
+      height: 730px;
+    }
+    h2{
+      @include mq("l-sp"){
+        font-size: 20px;
+        }
+      &::after{
+        display: block;
+        content: "";
+        width: 1px;
+        height: 100px;
+        background-color: #aaa;
+        margin-right: 1vw;
+        @include mq("l-sp"){
+          margin-right: 1px;
+          }
+      }
+    }
+    .txt-box{
+      width: 40%;
+      height: 300px;
+      padding: 10px;
+      @include mq("tab"){
+        width: 50%;
+      }
+      @include mq("l-sp"){
+        width: 85%;
+        margin: 170px auto 0;
+        }
+        @include mq("sp"){
+          width: 102%;
+          margin: 170px auto 0;
+          }
+      p{
+        padding-top: 20px;
+        margin-left: 20px;
+        position: relative;
+        font-weight: bold;
+        @include mq("l-tab"){
+          margin-left: 10px;
+          }
+          @include mq("tab"){
+            margin-left: 5px;
+          }
+          @include mq("l-sp"){
+            margin-left: 3px;
+            font-size: 14px;
+          }
+        &:first-of-type{
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "一一〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(2){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "一四〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(3){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "五五〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(4){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "三六〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(5){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "二六〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(6){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "四八円";
+            text-indent: 1rem;
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(7){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "三八円";
+            text-indent: 1rem;
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(8){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "〇円";
+            text-indent: 2rem;
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(n+10){
+          text-indent: 1rem;
+          margin-left: 10px;
+          @include mq("sp"){
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .others-wrapper{
+      width: 50%;
+      height: 600px;
+      margin-top: 30px;
+      position: relative;
+      @include mq("l-sp"){
+        position: absolute;
+        top: 0;
+        left: 30%;
+      }
+      p{
+        width:44%;
+        height: 33%;
+        margin-right: 5%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include mq("tab"){
+          width: 50%;
+          height: 25%;
+        }
+        @include mq("l-sp"){
+          width: 100%;
+          margin-right: 2%;
+          }
+        &:nth-of-type(2){
+          position: absolute;
+          top: 20%;
+          right: 35%;
+          @include mq("l-sp"){
+            top:15%;
+            right: 50%;
+          }
+        }
+        img{
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .others{
+    width: 80%;
+    height: 500px;
+    margin:0 auto 0;
+    padding: 20px;
+    border-bottom: 1px solid #aaa;
+    writing-mode:vertical-rl;
+    position: relative;
+    @include mq("tab"){
+      width: 88%;
+    }
+    @include mq("l-sp"){
+      display: flex;
+      width: 100%;
+      height: 700px;
+    }
+    h2{
+      @include mq("l-sp"){
+        font-size: 20px;
+        }
+      &::after{
+        display: block;
+        content: "";
+        width: 1px;
+        height: 100px;
+        background-color: #aaa;
+        margin-right: 1vw;
+        @include mq("l-sp"){
+          margin-right: 1px;
+          }
+      }
+    }
+    .txt-box{
+      width: 40%;
+      height: 300px;
+      padding: 10px;
+      @include mq("tab"){
+        width: 50%;
+      }
+      @include mq("l-sp"){
+        width: 70%;
+        margin: 170px auto 0;
+        }
+        @include mq("sp"){
+          width: 90%;
+          margin: 170px auto 0;
+          }
+      p{
+        padding-top: 20px;
+        margin-left: 25px;
+        position: relative;
+        font-weight: bold;
+        @include mq("tab"){
+          margin-left: 10px;
+        }
+        @include mq("l-sp"){
+          margin-left: 7px;
+          font-size: 14px;
+        }
+        &:first-of-type{
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "五二〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(2){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "五五〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(3){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "三八〇円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(4){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "三五五円";
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(5){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "三〇円";
+            text-indent: 1rem;
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+        &:nth-of-type(6){
+          &::after{
+            display: block;
+            text-orientation:upright;
+            content: "五円";
+            text-indent: 2rem;
+            position: absolute;
+            top: 200px;
+            left: 0;
+          }
+        }
+      }
+    }
+    .others-wrapper{
+      width: 50%;
+      height: 600px;
+      margin-top: 30px;
+      position: relative;
+      @include mq("l-sp"){
+        position: absolute;
+        top: 0;
+        left: 30%;
+      }
+      p{
+        width:44%;
+        height: 33%;
+        margin-right: 5%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include mq("tab"){
+          width: 50%;
+          height: 25%;
+        }
+        @include mq("l-sp"){
+          width: 100%;
+          margin-right: 2%;
+          }
+        &:nth-of-type(2){
+          position: absolute;
+          top: 20%;
+          right: 35%;
+          @include mq("l-sp"){
+            top:15%;
+            right: 50%;
+          }
+        }
+        img{
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+.back{
+  width: 100%;
+  height: 100px;
+  background: url(../../img/wasi-6.png);
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  z-index: -1;
+}
+
+#up{
+  position: fixed;
+  right: 40px;
+  bottom: 30px;
+  font-size: 12px;
+  display: none;
+  z-index: 100;
+  @include mq("l-sp"){
+    overflow-x: hidden;
+    right: 15px;
+    bottom: 10px;
+  }
+  a{
+    writing-mode: vertical-rl;
+    display: flex;
+    padding: 0 11px 5px;
+    span{
+    display: block;
+    margin: 20px auto 0;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #555;
+    border-right: 2px solid #555;
+    transform: scale(0.6) rotate(-45deg);
+    transition: 0.3s;
+    }
+    &:hover>span{
+      transform: scale(1) rotate(-45deg);
+      border-top: 2px solid $txt-color;
+      border-right: 2px solid $txt-color;
+    }
+  }
+}
