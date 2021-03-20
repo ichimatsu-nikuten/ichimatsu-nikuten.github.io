@@ -168,6 +168,10 @@
           top: 40%;
           width: 80%;
         } 
+        @include mq("s-sp"){
+          top: 40%;
+          width: 100%;
+        } 
       p{
         padding: 20px 0;
         font-weight: bold;
@@ -327,6 +331,10 @@
         top: 45%;
         width: 80%;
       }
+      @include mq("s-sp"){
+        top: 45%;
+        width: 100%;
+      } 
     p{
       padding: 20px 0;
       font-weight: bold;

@@ -156,17 +156,12 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/aos.js"></script>
   <script src="js/jquery.bxslider.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/rellax.min.js"></script>
 
 <script>
   $(function(){
-    AOS.init({
-      offset: 150,
-      duration: 2000,
-      easing: 'easeOutQuart',
-    });
 
     $('.bxslider').bxSlider({
       mode:'fade',
@@ -175,6 +170,11 @@
       controls:false,//矢印
     });
 
+    AOS.init({
+      offset: 150,
+      duration: 2000,
+      easing: 'easeOutQuart',
+    });
 
   // Also can pass in optional settings block
   var rellax = new Rellax('.rellax', {

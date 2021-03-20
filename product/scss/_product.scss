@@ -301,6 +301,9 @@
         @include mq("sp"){
           width: 90%;
           }
+          @include mq("s-sp"){
+            width: 100%;
+            }
       p{
         padding-top: 20px;
         margin-left: 25px;
@@ -467,6 +470,9 @@
         @include mq("sp"){
           width: 80%;
           }
+          @include mq("s-sp"){
+            width: 90%;
+            }
       p{
         padding-top: 20px;
         margin-left: 25px;
@@ -621,7 +627,7 @@
         margin: 170px auto 0;
         }
         @include mq("sp"){
-          width: 102%;
+          width: 100%;
           margin: 170px auto 0;
           }
       p{
@@ -816,10 +822,14 @@
         width: 70%;
         margin: 170px auto 0;
         }
-        @include mq("sp"){
-          width: 90%;
-          margin: 170px auto 0;
-          }
+      @include mq("sp"){
+        width: 90%;
+        margin: 170px auto 0;
+        }
+      @include mq("s-sp"){
+        width: 95%;
+        margin: 170px auto 0;
+        }
       p{
         padding-top: 20px;
         margin-left: 25px;

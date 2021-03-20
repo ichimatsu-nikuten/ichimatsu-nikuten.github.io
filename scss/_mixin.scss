@@ -8,6 +8,7 @@ $breakpoints: (
   "tab": "screen and (max-width: 959px)",
   "l-sp": "screen and (max-width: 736px)",
   "sp": "screen and (max-width: 320px)",
+  "s-sp": "screen and (max-width:290px)",
 );
 
 @mixin mq($breakpoint: l-tab) {
@@ -29,6 +30,12 @@ $breakpoints: (
   }
 
 @mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
+  @mixin mq($breakpoint: s-sp) {
     @media #{map-get($breakpoints, $breakpoint)} {
       @content;
     }
