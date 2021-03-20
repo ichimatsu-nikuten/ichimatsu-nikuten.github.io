@@ -367,6 +367,7 @@ header{
       img{
         object-fit: cover;
         object-position: top;
+        filter: brightness(75%);
       }
     }
   }
