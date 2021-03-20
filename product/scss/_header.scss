@@ -19,7 +19,7 @@ header{
     writing-mode: vertical-rl;
     @include mq("l-sp"){
       writing-mode: horizontal-tb;
-      width: 200%;
+      width: 100%;
       padding: 10px 20px;
       top: 0;
       left: 0;
