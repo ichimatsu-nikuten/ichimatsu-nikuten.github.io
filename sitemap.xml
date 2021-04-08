@@ -3,23 +3,10 @@
 
 <!--  created with free sitemap generation system www.sitemapxml.jp  --> 
 <url>
-  <loc>https://ichimatsu-nikuten.github.io/</loc>
+  <loc>https://ichimatsu-nikuten.github.io/ichimatsu-nikuten.github.io/</loc>
   <priority>1.0</priority>
-  <lastmod>2021-03-21T01:12:05+09:00</lastmod>
-</url>
-<url>
-  <loc>https://ichimatsu-nikuten.github.io/product/</loc>
-  <priority>0.8</priority>
-  <lastmod>2021-03-21T01:12:05+09:00</lastmod>
-</url>
-<url>
-  <loc>https://ichimatsu-nikuten.github.io/history/</loc>
-  <priority>0.8</priority>
-  <lastmod>2021-03-21T01:12:05+09:00</lastmod>
-</url>
-<url>
-  <loc>https://ichimatsu-nikuten.github.io/history</loc>
-  <priority>0.8</priority>
+  <lastmod>2021-04-08T13:06:28+09:00</lastmod>
+  <changefreq>never</changefreq>
 </url>
 
 </urlset>
