@@ -8,6 +8,7 @@ footer{
   display: flex;
   @include mq("l-sp"){
     height: 50px;
+    width: 99%;
   }
   .f-txt-wrapper{
     width: 40%;
