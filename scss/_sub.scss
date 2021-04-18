@@ -129,7 +129,6 @@
     display: none;
     z-index: 100;
     @include mq("l-sp"){
-      overflow-x: hidden;
       right: 30px;
       bottom: 10px;
     }
